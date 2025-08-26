@@ -63,3 +63,6 @@
   }
   </style>
   
+
+  # 3,91,540 gratuity
+ # last mosth salary 1,63,669
