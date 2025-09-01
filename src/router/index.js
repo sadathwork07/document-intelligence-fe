@@ -5,14 +5,11 @@ import { useAuthStore } from '@/stores/auth'
 import Login from '@/pages/Login.vue'
 import Register from '@/pages/Register.vue'
 import AppLayout from '@/components/layout/AppLayout.vue'
+import UploadDocument from '@/views/UploadDocument.vue'
 
 // import ForgotPassword from '@/views/ForgotPassword.vue'
 
 const routes = [
-  {
-    path: '/',
-    redirect: '/login', // default page
-  },
   {
     path: '/signup',
     name: 'register',
@@ -24,10 +21,11 @@ const routes = [
     component: Login,
   },
   {
-    path: '/dashboard',
+    path: '/',
     name: 'dashboard',
     component: AppLayout,
     meta: { requiresAuth: true },
+    children: [{ path: 'upload-document', name: 'UploadDocument', component: UploadDocument }],
   },
 ]
 
